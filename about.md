@@ -18,3 +18,7 @@ If you wish, please don't hesitate to contact me.
 
 
 [**photography@besson-girard.fr**](photography@besson-girard.fr)
+
+
+
+You can also follow me on [**instagram**](https://www.instagram.com/shamansim/)
