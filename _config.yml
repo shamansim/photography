@@ -9,8 +9,11 @@
 title: Simon Besson-Girard Photography
 email: photography@besson-girard.fr
 description: Simon's Portfolio
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+
+baseurl:
+
+url: "" 
+
 twitter_username: SimonBesson
 github_username: shamansim
 
