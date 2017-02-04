@@ -1,0 +1,35 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' type='text/css'>
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="shortcut icon" href="/favicon.ico" />
+  {% include google_analytics.html %}
+
+  {% if page.layout == "post" %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@_garethlewis">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 140 }}">
+    <meta name="twitter:image" content="{{ page.hero.image | prepend: '/assets/posts/thumbs/' | prepend: site.url | append: '.png' }}">
+  {% elsif page.layout == "photo" %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@_garethlewis">
+    <meta name="twitter:creator" content="@_garethlewis">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="This photo was taken {% if page.exif.dateTaken %}on {{ page.exif.dateTaken | date: '%-d %B %Y' }}{% endif %} {% if page.exif.location.name %}in {{ page.exif.location.name }}{% endif %}">
+    <meta name="twitter:image" content="{{ page.image | prepend: '/assets/photographs/originals/' | prepend: site.url' }}">
+  {% endif %}
+
+  {% for script in page.script %}
+    <script src="{{ script }}"></script>
+  {% endfor %}
+</head>

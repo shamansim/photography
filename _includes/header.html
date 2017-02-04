@@ -1,0 +1,17 @@
+{% assign current = page.url | downcase | split: '/' %}
+
+<header class="{{ page.hero.header-style }}">
+  <div class="container">
+    <nav>
+      <a href="{{ site.baseurl }}/blog" class="site-logo"></a>
+      <ul>
+        <li>
+          <a href="{{ site.baseurl }}/photos" {% if current[1] == "photos" %} class="active" {% endif %}>Photos</a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/about" {% if current[1] == "about" %} class="active" {% endif %}>About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

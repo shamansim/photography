@@ -1,0 +1,15 @@
+---
+title: "Enoshima"
+datePosted: 2016-10-25 18:41:00 +0000
+image: "enoshima.JPG"
+exif:
+  camera: "Panasonic Lumix DMC-FZ200"
+  dateTaken: 2016-03-12 15:04:00 +0900
+  aperture: f/5.6
+  shutterSpeed: 1/1300
+  iso: 100
+  location:
+    name: "Enoshima, Japan"
+    latitude:
+    longitude:
+---

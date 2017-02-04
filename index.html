@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="container">
+
+  <section class="post-list">
+    {% for post in site.posts %}
+      <article>
+        <h1><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+        <aside>
+          {% if post.hero.image %}
+            <img src="{{ site.baseurl }}/assets/posts/thumbs/{{ post.hero.image | append: '.png' }}" alt="{{ post.title }}" />
+          {% endif %}
+          <ul>
+            <li>by <a href="https://simon.besson-girard.fr">Simon Besson-Girard</a></li>
+            <li>{{ post.date | date: "%A, %-d %B %Y" }}</li>
+          </ul>
+        </aside><!--
+     --><section>
+          {{ post.excerpt }}
+        </section>
+      </article>
+    {% endfor %}
+  </section>
+
+</div>
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->

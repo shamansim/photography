@@ -1,0 +1,33 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Simon Besson-Girard Photography
+email: photography@besson-girard.fr
+description: Simon's Portfolio
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+twitter_username: SimonBesson
+github_username: shamansim
+
+collections:
+  photos:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: photos
+    values:
+      layout: photo
+
+# Build settings
+markdown: kramdown
+
+permalink: /blog/:year/:month/:day/:title/
+
+excerpt_separator:  <!--more-->

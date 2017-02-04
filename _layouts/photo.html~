@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class="photo-container">
+
+  <figure class="photo">
+    <img src="{{ site.baseurl }}/assets/photographs/originals/{{ page.image }}" alt="{{ page.title }}" />
+    <figcaption>This photo was taken {% if page.exif.dateTaken %}on {{ page.exif.dateTaken | date: "%-d %B %Y" }}{% endif %} {% if page.exif.location.name %}in {{ page.exif.location.name }}{% endif %}.
+    <br/>
+    {% if page.exif.aperture %}<img style="margin-top:1rem; height:1rem;" src="{{ site.baseurl }}/assets/images/aperture.jpeg" alt="Aperture:"/> {{ page.exif.aperture }}{% endif %} {% if page.exif.shutterSpeed %} <img style="height:1rem;" src="{{ site.baseurl }}/assets/images/shutterSpeed.png" alt="; Shutter speed:" /> {{ page.exif.shutterSpeed }}{% endif %} {% if page.exif.iso %} <img style="height:1rem;" src="{{ site.baseurl }}/assets/images/iso.png" alt="; ISO:" /> {{ page.exif.iso }}{% endif %} {% if page.exif.camera %}<img style="height:1rem;" src="{{ base.url }}/assets/images/camera.png" alt="; Camera:" />{{ page.exif.camera }}{% endif %}</figcaption>
+  </figure>
+
+  {{ content }}
+
+</div>

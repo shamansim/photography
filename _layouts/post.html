@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  {% if page.hero %}
+    {% if page.hero.animation %}
+      <section class="hero" style="background-color: {{ page.hero.background-color }}">
+        {% include posts/{{ page.hero.image | append: '.html' }} %}
+      </section>
+    {% else %}
+      <section class="hero" style="background-color: {{ page.hero.background-color }}">
+        <img src="{{ site.baseurl }}/assets/posts/{{ page.hero.image }}.png" alt="{{ page.title }}" />
+      </section>
+    {% endif %}
+  {% endif %}
+
+  <div class="container">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta">
+      by <a href="https://simon.besson-girard.fr">{{ page.author }}</a></span> on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%A, %-d %B %Y" }}</time>
+    </p>
+
+    <div class="post-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    {% if page.comments %}
+      {% include comments.html %}
+    {% endif %}
+  </div>
+
+</article>
