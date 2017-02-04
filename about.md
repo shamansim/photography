@@ -10,7 +10,6 @@ Hi, my name is Simon, I'm French. I'm an amateur photographer. I currently live 
 *Bonjour, je m'appelle Simon, je suis Francais. Je suis photographe amateur. J'habite actuellement a Munich en Allemagne ou je fais mon doctorat.*
 
 
-***
 
 
 If you wish, please don't hesitate to contact me.
